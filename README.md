@@ -1,8 +1,8 @@
-# YTC (YouTube Clone)
+# Content Viewing And Sharing Platform
 
 A comprehensive video sharing platform built with Django, featuring AI-powered recommendations, content moderation, and social features.
 
-![YTC Screenshot](docs/images/screenshot.png)
+(docs/images/screenshot.png)
 
 ## 📋 Table of Contents
 
@@ -25,7 +25,7 @@ A comprehensive video sharing platform built with Django, featuring AI-powered r
 
 ## 🌟 Overview
 
-YTC is a feature-rich video sharing platform inspired by YouTube, built using Django and modern web technologies. It includes AI-powered recommendations, BERT-based search, content moderation tools, and social features such as comments, likes, and user profiles.
+CV&SP is a feature-rich video sharing platform inspired by YouTube, built using Django and modern web technologies. It includes AI-powered recommendations, BERT-based search, content moderation tools, and social features such as comments, likes, and user profiles.
 
 ## 🚀 Features
 
@@ -74,10 +74,6 @@ YTC is a feature-rich video sharing platform inspired by YouTube, built using Dj
 - **JavaScript/jQuery**: Frontend interactivity
 - **HTMX**: AJAX functionality without JavaScript
 
-### Infrastructure
-- **Docker**: Containerization
-- **Nginx**: Web server and reverse proxy
-- **AWS S3/GCS**: Media storage (optional)
 
 ## 📝 Prerequisites
 
@@ -85,9 +81,7 @@ Before you begin, ensure you have the following installed:
 
 - Python 3.9 or higher
 - PostgreSQL 13 or higher
-- Redis 6 or higher
 - FFmpeg 4.4+ (for video processing)
-- Node.js 16+ (for frontend asset compilation, optional)
 - Git
 
 ## 🔧 Installation
@@ -96,7 +90,7 @@ Before you begin, ensure you have the following installed:
 
 ```bash
 git clone https://github.com/sohamdhobi/YouTube-Clone.git
-cd ytc
+cd CV&SP
 ```
 
 ### Step 2: Set Up Virtual Environment
@@ -245,10 +239,10 @@ psql -U postgres
 CREATE DATABASE youtube_clone;
 
 # Create user with password
-CREATE USER ytc_user WITH PASSWORD 'secure_password';
+CREATE USER CV&SP_user WITH PASSWORD 'secure_password';
 
 # Grant privileges
-GRANT ALL PRIVILEGES ON DATABASE youtube_clone TO ytc_user;
+GRANT ALL PRIVILEGES ON DATABASE youtube_clone TO CV&SP_user;
 
 # Exit PostgreSQL
 \q
@@ -262,7 +256,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'youtube_clone',
-        'USER': 'ytc_user',
+        'USER': 'CV&SP_user',
         'PASSWORD': 'secure_password',
         'HOST': 'localhost',
         'PORT': '5432',
