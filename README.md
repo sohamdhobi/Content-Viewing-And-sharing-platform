@@ -420,18 +420,6 @@ python manage.py runserver
 # Access the site at http://127.0.0.1:8000
 ```
 
-### Celery Worker (for background tasks)
-
-```bash
-# Start Redis (if not running)
-redis-server
-
-# Start Celery worker
-celery -A youtube_clone worker -l info
-
-# Start Celery beat for scheduled tasks
-celery -A youtube_clone beat -l info
-```
 
 ### Process Videos
 
@@ -723,12 +711,6 @@ Contributions are welcome! Please follow these steps:
 4. Push to the branch: `git push origin feature-name`
 5. Submit a pull request
 
-### Coding Standards
-
-- Follow PEP 8 for Python code
-- Use Django's coding style for templates
-- Add docstrings for all functions and classes
-- Write tests for new features
 
 ### Running Tests
 
